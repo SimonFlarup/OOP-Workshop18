@@ -31,12 +31,14 @@ public class main {
         
         Sensor s2 = new TempSensor("Temp");
         Sensor s3 = new TempSensor("Temp");
+        Sensor s4 = new CO2Sensor("CO2");
         Actuator a2 = new TemperaturActuator("Temp", 22);
         
         
         b2.addAcuator(a2);
         b2.addSensor(s2);
         b2.addSensor(s3);
+        b2.addSensor(s4);
         
         System.out.println(b2);
         System.out.println(b2.getActuatorList().get(0));
