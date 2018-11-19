@@ -9,8 +9,8 @@ package Domain;
  *
  * @author simon
  */
-public class CO2Actuator extends Actuator{
-    
+public class CO2Actuator extends Actuator {
+
     private int targetPPM;
 
     public CO2Actuator(String name, int targetPPM) {
@@ -22,5 +22,5 @@ public class CO2Actuator extends Actuator{
     public String toString() {
         return ("Name: " + super.getName() + " UUID: " + super.getUUID() + " Target PPM: " + this.targetPPM);
     }
-    
+
 }

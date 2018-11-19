@@ -17,13 +17,12 @@ public class CO2Sensor extends Sensor {
 
     @Override
     public int getValue() {
-        
-        return (int)Math.random()*100;
-            }
+        return (int) (Math.random() * 100);
+    }
 
     @Override
     public String toString() {
-        return "Name = " + super.getName()+ "Id = " + super.getUUID()+ "Value = " + this.getValue();
+        return "Name = " + super.getName() + "Id = " + super.getUUID() + "Value = " + this.getValue();
     }
-    
+
 }
