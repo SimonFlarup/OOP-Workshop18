@@ -20,7 +20,8 @@ public class TemperaturActuator extends Actuator {
 
     @Override
     public String toString() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+        return ("Name: " + super.getName() + " UUID: " + super.getUUID() + " Target Temp: " + this.targetTemp);
     }
     
 }

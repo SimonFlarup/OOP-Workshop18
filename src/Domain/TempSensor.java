@@ -23,7 +23,7 @@ public class TempSensor extends Sensor {
     @Override
     public String toString() {
 
-        return super.getName() + super.getUUID() + this.getValue();
+        return "Name = " + super.getName() + " Id = " + super.getUUID() + " Value = " + this.getValue();
     }
 
 }

@@ -58,6 +58,16 @@ public class Building extends Unit {
     public List<Sensor> getSensorList() {
         return sensorList;
     }
+    
+    public List<Integer> getSensorData(){
+        ArrayList<Integer> values = new ArrayList<>();
+        
+        for (Sensor sensor : sensorList){
+            values.add(sensor.getValue());
+        }
+        
+        return values;
+    }
 
     @Override
     public String toString() {
