@@ -12,33 +12,32 @@ import java.util.UUID;
  * @author askel
  */
 public abstract class Unit {
-    
+
     private final UUID id;
     private String name;
-    
-    public Unit(String name){
-        
+
+    public Unit(String name) {
+
         this.name = name;
         this.id = UUID.randomUUID();
     }
-    
-    
-    public UUID getUUID(){
-        
+
+    public UUID getUUID() {
+
         return this.id;
     }
-    
-    public String getName(){
-        
+
+    public String getName() {
+
         return this.name;
     }
-    
-    public void setName(String name){
-        
+
+    public void setName(String name) {
+
         this.name = name;
     }
-    
+
     @Override
     public abstract String toString();
-    
+
 }
