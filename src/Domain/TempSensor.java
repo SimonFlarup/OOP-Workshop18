@@ -17,13 +17,13 @@ public class TempSensor extends Sensor {
 
     @Override
     public int getValue() {
-        return (int)Math.random()*100;
+        return (int) (Math.random() * 100);
     }
 
     @Override
     public String toString() {
-        
+
         return super.getName() + super.getUUID() + this.getValue();
     }
-    
+
 }

@@ -10,22 +10,22 @@ package Domain;
  * @author simon
  */
 public abstract class Actuator extends Unit {
-    
+
     private int sensorValue = 0;
-    
+
     public Actuator(String name) {
         super(name);
     }
-    
-    public int getsensorValue(){
+
+    public int getsensorValue() {
         return this.sensorValue;
     }
-    
-    public void setSensorValue(int sensorValue){
+
+    public void setSensorValue(int sensorValue) {
         this.sensorValue = sensorValue;
     }
-    
+
     @Override
     public abstract String toString();
-    
+
 }

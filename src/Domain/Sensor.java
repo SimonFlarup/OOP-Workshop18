@@ -10,7 +10,7 @@ package Domain;
  * @author askel
  */
 public abstract class Sensor extends Unit {
-    
+
     private int value;
 
     public Sensor(String name) {
@@ -18,8 +18,7 @@ public abstract class Sensor extends Unit {
     }
 
     public abstract int getValue();
-    
-    
+
     @Override
     public abstract String toString();
 }
