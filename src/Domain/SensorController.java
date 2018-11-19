@@ -9,6 +9,6 @@ package Domain;
  *
  * @author askel
  */
-public class Controller {
+public class SensorController {
     
 }
