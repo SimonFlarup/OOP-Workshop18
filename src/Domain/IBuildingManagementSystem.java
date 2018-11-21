@@ -57,6 +57,8 @@ public interface IBuildingManagementSystem {
      */
     public UUID addCo2Sensor(UUID buildingId, String name);
 
+    public void removeBuilding(UUID buildingId);
+    
     /**
      *
      * @param buildingId id of building from which the sensor should be removed.

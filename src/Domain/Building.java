@@ -58,15 +58,51 @@ public class Building extends Unit {
     public List<Sensor> getSensorList() {
         return sensorList;
     }
-    
-    public List<Integer> getSensorData(){
+
+    public List<Integer> getTempSensorData() {
         ArrayList<Integer> values = new ArrayList<>();
-        
-        for (Sensor sensor : sensorList){
-            values.add(sensor.getValue());
+
+        for (Sensor sensor : sensorList) {
+            if (sensor instanceof TempSensor) {
+                values.add(sensor.getValue());
+            }
         }
-        
+
         return values;
+    }
+
+    public List<Integer> getCo2SensorData() {
+        ArrayList<Integer> values = new ArrayList<>();
+
+        for (Sensor sensor : sensorList) {
+            if (sensor instanceof CO2Sensor) {
+                values.add(sensor.getValue());
+            }
+        }
+
+        return values;
+    }
+
+    public void updateActuators() {
+        int temp = 0;
+        int co2 = 0;
+        for (int num : getTempSensorData()) {
+            temp += num;
+        }
+
+        for (int num : getCo2SensorData()) {
+            co2 += num;
+        }
+        temp /= getTempSensorData().size();
+        co2 /= getCo2SensorData().size();
+
+        for (Actuator a : getActuatorList()) {
+            if (a instanceof TempActuator) {
+                a.setSensorValue(temp);
+            } else if (a instanceof CO2Actuator) {
+                a.setSensorValue(co2);
+            }
+        }
     }
 
     @Override

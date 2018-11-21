@@ -50,6 +50,11 @@ public class Database implements IBuildingManagementSystem {
     }
 
     @Override
+    public void removeBuilding(UUID buildingId){
+        buildingInformation.remove(buildingId);
+    }
+
+    @Override
     public void removeSensor(UUID buildingId, UUID sensorId) {
         buildingInformation.get(buildingId).removeSensor(sensorId);
     }

@@ -45,7 +45,7 @@ public class main {
         System.out.println(b2.getActuatorList().get(0));
         System.out.println(b2.getSensorList().get(0));
         
-        System.out.println(b2.getSensorData());
+        System.out.println(b2.getTempSensorData());
     }
     
 }
