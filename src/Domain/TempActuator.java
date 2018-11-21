@@ -9,11 +9,11 @@ package Domain;
  *
  * @author simon
  */
-public class TemperaturActuator extends Actuator {
+public class TempActuator extends Actuator {
     
     private int targetTemp; 
     
-    public TemperaturActuator(String name, int targetTemp) {
+    public TempActuator(String name, int targetTemp) {
         super(name);
         this.targetTemp = targetTemp;
     }

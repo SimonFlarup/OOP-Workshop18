@@ -17,7 +17,7 @@ public class main {
         Building b1 = new Building("MMMI","Vej");
         
         Sensor s1 = new TempSensor("Temp");
-        Actuator a1 = new TemperaturActuator("Temp", 22);
+        Actuator a1 = new TempActuator("Temp", 22);
         
         
         b1.addAcuator(a1);
@@ -32,7 +32,7 @@ public class main {
         Sensor s2 = new TempSensor("Temp");
         Sensor s3 = new TempSensor("Temp");
         Sensor s4 = new CO2Sensor("CO2");
-        Actuator a2 = new TemperaturActuator("Temp", 22);
+        Actuator a2 = new TempActuator("Temp", 22);
         
         
         b2.addAcuator(a2);
