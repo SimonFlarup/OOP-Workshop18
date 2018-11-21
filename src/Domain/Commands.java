@@ -11,9 +11,19 @@ package Domain;
  */
 public enum Commands{
     
-    ADD,
-    REMOVE,
-    GET,
-    SET;
-
+    ADD("add"),
+    REMOVE("remove"),
+    GET("get"),
+    SET("set");
+    
+    private String commandString;
+    
+    Commands(String commandString){
+        this.commandString = commandString;
+    }
+    
+    @Override
+    public String toString(){
+        return commandString;
+    }
 }
